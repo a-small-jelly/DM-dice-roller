@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	 <title>DM Dice Roller</title>
+
+  	 <link href="./style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="pc-box" id="pc-01">
+
+	<form action="/process" method="get" autocomplete="off">
+
+	<label for="name">Name:</label> <input type="text" id="name" name="name"><br>
+	
+	<label for="ac">AC:</label> <input type="text" id="ac" name="ac" size="4"><br>
+	
+	<label for="passive-perception">Passive Perception:</label> <input type="text" id="passive-perception" name="passive-perception" size="4"><br>
+
+	<label for="perceptionMod">Perception Modifier:</label>
+		<select name="perceptionMod" id="perceptionMod">
+			<option value="-9">-9</option>
+			<option value="-8">-8</option>
+			<option value="-7">-7</option>
+			<option value="-6">-6</option>
+			<option value="-5">-5</option>
+			<option value="-4">-4</option>
+			<option value="-3">-3</option>
+			<option value="-2">-2</option>
+			<option value="-1">-1</option>
+			<option value="0" selected>0</option>
+			<option value="1">+1</option>
+			<option value="2">+2</option>
+			<option value="3">+3</option>
+			<option value="4">+4</option>
+			<option value="5">+5</option>
+			<option value="6">+6</option>
+			<option value="7">+7</option>
+			<option value="8">+8</option>
+			<option value="9">+9</option>
+		</select>
+	<br>
+
+
+	<label for="profBonus">Proficiency Bonus:</label> 
+
+	<select name="profBonus" id="profBonus">
+			<option value="-9">-9</option>
+			<option value="-8">-8</option>
+			<option value="-7">-7</option>
+			<option value="-6">-6</option>
+			<option value="-5">-5</option>
+			<option value="-4">-4</option>
+			<option value="-3">-3</option>
+			<option value="-2">-2</option>
+			<option value="-1">-1</option>
+			<option value="0" selected>0</option>
+			<option value="1">+1</option>
+			<option value="2">+2</option>
+			<option value="3">+3</option>
+			<option value="4">+4</option>
+			<option value="5">+5</option>
+			<option value="6">+6</option>
+			<option value="7">+7</option>
+			<option value="8">+8</option>
+			<option value="9">+9</option>
+	</select>
+
+
+
+
+ 	</form>
+
+<div class="results">
+	<span id="dieRoll1"></span> + <span id="perMod"></span> + <span id="prof"></span> = <b><span id="total"></span></b>
+</div>
+
+</div>
+
+
+
+
+<button onclick="rollDice(d20);">roll d20</button>
+
+<br><br><br>
+
+
+
+
+
+
+	<script src="./dmdice.js"></script>
+
+
+
+
+
+</body>
+
+</html>
