@@ -1,8 +1,39 @@
-.pc-box {
-	border: 1px solid black;
+body {
+
 }
 
 
-.results {
-	border:  0px;
+.pc-box {
+	border: 1px solid black;
+	margin: 1em 1em 1em 1em;
+	padding: 10px 10px 10px 10px;
+}
+
+
+.roll-results {
+	border: 1px;
+}
+
+
+
+#remove-pc {
+	background-color: red;
+
+}
+
+
+#dieRoll {
+
+}
+
+#perMod {
+
+}
+
+#prof {
+
+}
+
+#total {
+
 }

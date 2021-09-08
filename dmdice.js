@@ -19,6 +19,8 @@ const d100 = 100;
 
 let counter = 0;
 
+// need to add check for ids and not duplicate!!
+
 function addPC() {
 	// counter
 	counter++;
@@ -48,7 +50,13 @@ function addPC() {
 // and also fix id numbers
 
 
+
+
+
 function rollDice(die) {
+
+
+// NOTE: add in a thing for natural failures/crits
 
 		// roll the die
 	const roll = 1 + Math.floor(Math.random()*die);
@@ -59,15 +67,23 @@ function rollDice(die) {
 	console.log(thisButton);
 	console.log(i);
 
+
+		// check for checkboxes (ik it is redundant it's just for me)
+
+	const ckProf = document.getElementById("applyProf" + i).checked;
+	const ckPer = document.getElementById("applyPer" + i).checked;
+
 		// get mods etc and add everything
 
-	const mod = document.getElementById("perceptionMod" + i).value;
-	const prof = document.getElementById("profBonus" + i).value;
-	console.log(prof);
+	const mod = (ckPer == true) ? document.getElementById("perceptionMod" + i).value : 0;
+	const profB = (ckProf == true) ? document.getElementById("profBonus" + i).value : 0;
+
+		// results
+
 	document.getElementById("dieRoll" + i).innerHTML = roll;
-	document.getElementById("prof" + i).innerHTML = prof;
+	document.getElementById("prof" + i).innerHTML = profB;
 	document.getElementById("perMod" + i).innerHTML = mod;
-	document.getElementById("total" + i).innerHTML = +roll + +mod + +prof;
+	document.getElementById("total" + i).innerHTML = +roll + +mod + +profB;
 	return false; // 
 
 }
@@ -77,8 +93,12 @@ function removePC() {
 	const thisButton = event.srcElement.id;
 	const k = thisButton.slice(-1);
 	let deadPC = document.getElementById("pc" + k);
-	console.log(deadPC);
+	console.log(deadPC.id);
 	deadPC.remove();
+	counter--;
+	return false;
+	consloe.log(counter);
+
 }
 
 
