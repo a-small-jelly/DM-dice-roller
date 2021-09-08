@@ -10,18 +10,20 @@
 <body>
 
 
-<div class="pc-box" id="pc-01">
 
-	<form action="/process" method="get" autocomplete="off">
 
-	<label for="name">Name:</label> <input type="text" id="name" name="name"><br>
+<div class="pc-box" id="pc" style="display:none">
+
+
+
+	Name: <input type="text" id="pc-name"><br>
 	
-	<label for="ac">AC:</label> <input type="text" id="ac" name="ac" size="4"><br>
+	AC: <input type="text" id="ac" size="4"><br>
 	
-	<label for="passive-perception">Passive Perception:</label> <input type="text" id="passive-perception" name="passive-perception" size="4"><br>
+	Passive Perception: <input type="text" id="passive-perception" size="4"><br>
 
-	<label for="perceptionMod">Perception Modifier:</label>
-		<select name="perceptionMod" id="perceptionMod">
+	Perception Modifier:
+		<select id="perceptionMod">
 			<option value="-9">-9</option>
 			<option value="-8">-8</option>
 			<option value="-7">-7</option>
@@ -45,18 +47,9 @@
 	<br>
 
 
-	<label for="profBonus">Proficiency Bonus:</label> 
+	Proficiency Bonus: 
 
-	<select name="profBonus" id="profBonus">
-			<option value="-9">-9</option>
-			<option value="-8">-8</option>
-			<option value="-7">-7</option>
-			<option value="-6">-6</option>
-			<option value="-5">-5</option>
-			<option value="-4">-4</option>
-			<option value="-3">-3</option>
-			<option value="-2">-2</option>
-			<option value="-1">-1</option>
+	<select id="profBonus">
 			<option value="0" selected>0</option>
 			<option value="1">+1</option>
 			<option value="2">+2</option>
@@ -69,16 +62,46 @@
 			<option value="9">+9</option>
 	</select>
 
- 	</form>
 
-<div class="results">
-	<span id="dieRoll1"></span> + <span id="perMod"></span> + <span id="prof"></span> = <b><span id="total"></span></b>
-</div>
-	
-<button onclick="rollDice(d20);">roll d20</button>
-	
+<br>
+
+
+	<span id="dieRoll"></span> + 
+	<span id="perMod"></span> + 
+	<span id="prof"></span> = 
+	<span id="total" style="font-weight:bold"></span>
+
+
+<br>
+
+<button id="roll" onclick="rollDice(d20);">roll d20</button>
+
+<br>
+
+<button id="remove-PC" onclick="removePC();">Remove PC</button>
+
 </div>
 
+<br><br><br>
+
+
+
+
+<span id="additional-space"></span>
+
+<button id="add-PC" onclick="addPC();">Add PC</button>
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
 <script src="./dmdice.js"></script>
@@ -87,4 +110,9 @@
 
 </body>
 
+
+
+
+
 </html>
+
