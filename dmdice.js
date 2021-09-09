@@ -96,7 +96,6 @@ function rollDice(die) {
 
 function removePC() {
 	const thisButton = event.srcElement.id;
-	console.log(thisButton);
 	const k = thisButton.split("-")[1];
 	let deadPC = document.getElementById("pc-" + k);
 	deadPC.remove();
