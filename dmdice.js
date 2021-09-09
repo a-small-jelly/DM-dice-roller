@@ -48,9 +48,6 @@ function addPC() {
 
 function rollDice(die) {
 
-
-// NOTE: add in a thing for natural failures/crits
-
 		// roll the die
 	const roll = 1 + Math.floor(Math.random()*die);
 
