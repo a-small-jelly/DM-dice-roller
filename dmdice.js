@@ -71,7 +71,7 @@ function rollDice(die) {
 		// results
 
 	document.getElementById("dieRoll-" + i).innerHTML = roll;
-	document.getElementById("profBonus-" + i).innerHTML = profB;
+	document.getElementById("prof-" + i).innerHTML = profB;
 	document.getElementById("perMod-" + i).innerHTML = mod;
 	document.getElementById("total-" + i).innerHTML = +roll + +mod + +profB
 
