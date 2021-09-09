@@ -9,21 +9,21 @@
 </head>
 <body>
 
+<button id="rollAll" onclick="rollAll(d20);">roll for all PCs</button>
+
+
+<div class="pcBox" id="pc-" style="display:none">
 
 
 
-<div class="pc-box" id="pc" style="display:none">
-
-
-
-	Name: <input type="text" id="pc-name"><br>
+	Name: <input type="text" id="pcName-"><br>
 	
-	AC: <input type="text" id="ac" size="4"><br>
+	AC: <input type="text" id="ac-" size="4"><br>
 	
-	Passive Perception: <input type="text" id="passive-perception" size="4"><br>
+	Passive Perception: <input type="text" id="passivePerception-" size="4"><br>
 
 	Perception Modifier:
-		<select id="perceptionMod">
+		<select id="perceptionMod-">
 			<option value="-9">-9</option>
 			<option value="-8">-8</option>
 			<option value="-7">-7</option>
@@ -46,14 +46,14 @@
 		</select>
 
 
-		Apply: <input type="checkbox" id="applyPer">
+		Apply: <input type="checkbox" id="applyPer-">
 
 	<br>
 
 
 	Proficiency Bonus: 
 
-	<select id="profBonus">
+	<select id="profBonus-">
 			<option value="0" selected>0</option>
 			<option value="1">+1</option>
 			<option value="2">+2</option>
@@ -68,23 +68,26 @@
 
 
 
-		Apply: <input type="checkbox" id="applyProf">
+		Apply: <input type="checkbox" id="applyProf-">
 
 
 <br>
 
 
-	<span id="dieRoll"></span> + 
-	<span id="perMod"></span> + 
-	<span id="prof"></span> = 
-	<span id="total" style="font-weight:bold"></span>
+	<span id="dieRoll-"></span> + 
+	<span id="perMod-"></span> + 
+	<span id="prof-"></span> = 
+	<span id="total-" style="font-weight:bold"></span>
+
+	<br>
+	<span id="message-" style="color:red;"></span>
 
 
 <br>
 
-<button id="roll" onclick="rollDice(d20);">roll d20</button>
+<button id="roll-" onclick="rollDice(d20);">roll d20</button>
 
-<button id="remove-PC" onclick="removePC();" style="float:right">Remove PC</button>
+<button id="removePC-" onclick="removePC();" style="float:right">Remove PC</button>
 
 </div>
 
@@ -93,9 +96,9 @@
 
 
 
-<span id="additional-space"></span>
+<span id="additionalSpace"></span>
 
-<button id="add-PC" onclick="addPC();">Add PC</button>
+<button id="addPC" onclick="addPC();">Add PC</button>
 
 
 
@@ -107,7 +110,7 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
 
 <script src="./dmdice.js"></script>

@@ -3,7 +3,7 @@ body {
 }
 
 
-.pc-box {
+.pcBox {
 	border: 1px solid black;
 	margin: 1em 1em 1em 1em;
 	padding: 10px 10px 10px 10px;
@@ -16,7 +16,7 @@ body {
 
 
 
-#remove-pc {
+#removePc {
 	background-color: red;
 
 }
@@ -35,5 +35,9 @@ body {
 }
 
 #total {
+
+}
+
+#message {
 
 }
