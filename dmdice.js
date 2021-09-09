@@ -49,14 +49,15 @@ function addPC() {
 function rollDice(die) {
 
 		// roll the die
+
 	const roll = 1 + Math.floor(Math.random()*die);
 
 		// get which pc this is 
-	const thisButton = event.srcElement.id;
-	const i = thisButton.slice(-1);
-	console.log(thisButton);
-	console.log(i);
 
+	const thisButton = event.srcElement.id;
+	const i = thisButton.split("-")[1];
+	console.log(thisButton); // just checking lol will delete
+	console.log(i);
 
 		// check for checkboxes (ik it is redundant it's just for me)
 
@@ -68,14 +69,17 @@ function rollDice(die) {
 	const mod = (ckPer == true) ? document.getElementById("perceptionMod-" + i).value : 0;
 	const profB = (ckProf == true) ? document.getElementById("profBonus-" + i).value : 0;
 
+
+
 		// results
 
 	document.getElementById("dieRoll-" + i).innerHTML = roll;
 	document.getElementById("prof-" + i).innerHTML = profB;
 	document.getElementById("perMod-" + i).innerHTML = mod;
-	document.getElementById("total-" + i).innerHTML = +roll + +mod + +profB
+	document.getElementById("total-" + i).innerHTML = +roll + +mod + +profB;
 
 		// crit
+
 	if (roll == "1") {
 	document.getElementById("message-" + i).innerHTML = "critical miss";
 		} else if (roll == "20") {
@@ -83,10 +87,7 @@ function rollDice(die) {
 		} else {
 	document.getElementById("message-" + i).innerHTML = null;
 		}
-
-
-	;
-	return false; // 
+	return false;
 
 }
 
@@ -103,6 +104,23 @@ function removePC() {
 
 
 
+
+function rollAll(die) {
+
+	const rollButtons = document.querySelectorAll('[id^="roll-"]');
+	const count = rollButtons.length;
+	const arrPCs = Array.from(rollButtons);
+	arrPCs.splice(0,1);
+
+	// for checking
+	console.log(rollButtons);
+	console.log(count);
+
+	arrPCs.forEach((button) => {
+		button.click();
+	})
+
+}
 
 
 
