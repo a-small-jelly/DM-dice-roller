@@ -9,16 +9,32 @@
 </head>
 <body>
 
+<button id="rollD20" onclick="rollPlain(d20);">roll one d20</button>
+
+	<span id="rollOne" style="font-weight:bold"></span>
+
+<br>
+
 <button id="rollAll" onclick="rollAll(d20);">roll for all PCs</button>
+
+
+
 
 
 <div class="pcBox" id="pc-" style="display:none">
 
 
 
-	Name: <input type="text" id="pcName-"><br>
+	Name: <input type="text" id="pcName-" onchange="">
+	Inspiration: <input type="checkbox" id="inspiration-">
+
+	<br>
 	
-	AC: <input type="text" id="ac-" size="4"><br>
+	AC: <input type="text" id="ac-" size="4">
+
+
+
+	<br>
 	
 	Passive Perception: <input type="text" id="passivePerception-" size="4"><br>
 
@@ -74,9 +90,9 @@
 <br>
 
 
-	<span id="dieRoll-"></span> + 
-	<span id="perMod-"></span> + 
-	<span id="prof-"></span> = 
+	<span id="dieRoll-"></span> 
+	<span id="perMod-"></span>
+	<span id="prof-"></span>
 	<span id="total-" style="font-weight:bold"></span>
 
 	<br>
@@ -105,6 +121,12 @@
 
 <br><br><br>
 
+
+<div id="rollHistory">
+
+
+
+</div>
 
 
 

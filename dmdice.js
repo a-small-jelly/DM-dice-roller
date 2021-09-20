@@ -1,4 +1,6 @@
+// NEXT: save for server session
 
+// CURRENTLY: working on roll history
 
 
 // dice
@@ -14,7 +16,6 @@ const d100 = 100;
 
 
 // functions
-
 
 
 let counter = 0;
@@ -45,6 +46,13 @@ function addPC() {
 }
 
 
+function rollPlain(die) {
+
+	const roll = 1 + Math.floor(Math.random()*die);
+	document.getElementById("rollOne").innerHTML = roll;
+	document.getElementById("rollHistory").insertAdjacentHTML('afterbegin', "d20: " + roll + "<br>" )
+}
+
 
 function rollDice(die) {
 
@@ -58,6 +66,8 @@ function rollDice(die) {
 	const i = thisButton.split("-")[1];
 	console.log(thisButton); // just checking lol will delete
 	console.log(i);
+	const name = document.getElementById("pcName-" + i).value;
+	console.log(name);
 
 		// check for checkboxes (ik it is redundant it's just for me)
 
@@ -69,14 +79,15 @@ function rollDice(die) {
 	const mod = (ckPer == true) ? document.getElementById("perceptionMod-" + i).value : 0;
 	const profB = (ckProf == true) ? document.getElementById("profBonus-" + i).value : 0;
 
-
+ 
 
 		// results
 
-	document.getElementById("dieRoll-" + i).innerHTML = roll;
-	document.getElementById("prof-" + i).innerHTML = profB;
-	document.getElementById("perMod-" + i).innerHTML = mod;
+	document.getElementById("dieRoll-" + i).innerHTML = roll + " +";
+	document.getElementById("perMod-" + i).innerHTML = mod + " +";
+	document.getElementById("prof-" + i).innerHTML = profB + " =";
 	document.getElementById("total-" + i).innerHTML = +roll + +mod + +profB;
+	document.getElementById("rollHistory").insertAdjacentHTML('afterbegin', name + ": " + roll + "<br>" )
 
 		// crit
 
@@ -90,6 +101,8 @@ function rollDice(die) {
 	return false;
 
 }
+ 
+
 
 
 function removePC() {
@@ -121,7 +134,6 @@ function rollAll(die) {
 	})
 
 }
-
 
 
 
