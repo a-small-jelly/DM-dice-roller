@@ -110,6 +110,8 @@ function rollDice(die) {
 
 
 
+
+
 function removePC() {
 	const thisButton = event.srcElement.id;
 	const k = thisButton.split("-")[1];
@@ -121,25 +123,23 @@ function removePC() {
 
 
 
-
-
 function rollAll(die) {
 
 	const rollButtons = document.querySelectorAll('[id^="roll-"]');
 	const count = rollButtons.length;
 	const arrPCs = Array.from(rollButtons);
 	arrPCs.splice(0,1);
-
-	// for checking
-	console.log(rollButtons);
-	console.log(count);
-
 	arrPCs.forEach((button) => {
 		button.click();
 	})
 
 }
 
+
+function reset() {
+	document.getElementById("rollHistory").innerHTML = "";
+	return false;
+}
 
 
 

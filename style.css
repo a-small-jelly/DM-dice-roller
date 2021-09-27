@@ -3,7 +3,6 @@ body {
 }
 
 
-
 .wrapper {
 	display: flex;
 	background-color: lightblue;
@@ -11,6 +10,7 @@ body {
 	flex-wrap: wrap;
 	column-gap: 1em; /*adjust row gaps bt elements -- but what i rly want is roll hist justified/aligned/whatever to the right and pc-box to left */
 	justify-content: space-around;
+	padding-bottom: 1em;
 }
 
 /* dont necessarily want it to be 100%, altho maybe without the border?? just want it to be on its on line -- or maybe just 100% of the container, not the whole thing ughhhh*/
@@ -40,14 +40,6 @@ body {
 	margin: .5em .5em .5em .5em;
 }
 
-/*
-.rollHistory {
-	margin: 1em 1em 1em 1em;
-	padding: 10px 10px 10px 10px;
-}
-
-*/
-
 .pc-wrapper {
 	order: 2; 
 	display: flex;
@@ -70,7 +62,7 @@ body {
 	border: 1px;
 }
 
-#addPC {
+#addPC, #clear {
 	max-width: 7em;
 	align-self: center;
 	margin: 1em 1em 1em 1em;
@@ -81,37 +73,8 @@ body {
 
 }
 
+
 #top {
 	border: 1px solid black;
 }
-
-#rollOne {
-
-}
-
-
-#dieRoll {
-
-}
-
-#perMod {
-
-}
-
-#prof {
-
-}
-
-#total {
-
-}
-
-#message {
-
-}
-
-#secondRoll- {
-
-}
-
 
