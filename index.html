@@ -6,70 +6,101 @@
 
   	 <link rel="stylesheet" href="./style.css" type="text/css">
 
+  	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
+
+
 <body>
 
-<button id="rollD20" onclick="rollPlain(d20);">roll one d20</button>
 
-	<span id="rollOne" style="font-weight:bold"></span>
-
-<br>
-
-<button id="rollAll" onclick="rollAll(d20);">roll for all PCs</button>
+<div class="wrapper">
 
 
 
+		<div class ="top" id="top">
+
+			<button id="rollAll" onclick="rollAll(d20);">roll for all PCs</button>
+
+			&emsp;
+
+			&emsp;
+
+			<select id="dice">
+				<option value="4">d4</option>
+				<option value="6">d6</option>
+				<option value="8">d8</option>
+				<option value="10">d10</option>
+				<option value="20" selected>d20</option>
+				<option value="100">d100</option>
+			</select>
 
 
-<div class="pcBox" id="pc-" style="display:none">
+				<button id="rollD20" onclick="rollPlain();">roll a die</button>
+
+				<span id="rollOne" style="font-weight:bold"></span>
+
+
+		</div>
 
 
 
-	Name: <input type="text" id="pcName-" onchange="">
-	Inspiration: <input type="checkbox" id="inspiration-">
+		<div class="pc-wrapper">
 
-	<br>
+
+		<div class="pcBox" id="pc-" style="display:none">
+
+
+
+			Name: <input type="text" id="pcName-" onchange="">
+
+			<br>
 	
-	AC: <input type="text" id="ac-" size="4">
+			AC: <input type="text" id="ac-" size="4">
+
+			&emsp;
+
+			Inspiration: <input type="checkbox" id="inspiration-">
 
 
 
-	<br>
+			<br>
 	
-	Passive Perception: <input type="text" id="passivePerception-" size="4"><br>
+			Passive Perception: <input type="text" id="passivePerception-" size="4"><br>
 
-	Perception Modifier:
-		<select id="perceptionMod-">
-			<option value="-9">-9</option>
-			<option value="-8">-8</option>
-			<option value="-7">-7</option>
-			<option value="-6">-6</option>
-			<option value="-5">-5</option>
-			<option value="-4">-4</option>
-			<option value="-3">-3</option>
-			<option value="-2">-2</option>
-			<option value="-1">-1</option>
-			<option value="0" selected>0</option>
-			<option value="1">+1</option>
-			<option value="2">+2</option>
-			<option value="3">+3</option>
-			<option value="4">+4</option>
-			<option value="5">+5</option>
-			<option value="6">+6</option>
-			<option value="7">+7</option>
-			<option value="8">+8</option>
-			<option value="9">+9</option>
-		</select>
+			Perception Modifier:
+				<select id="perceptionMod-">
+					<option value="-9">-9</option>
+					<option value="-8">-8</option>
+					<option value="-7">-7</option>
+					<option value="-6">-6</option>
+					<option value="-5">-5</option>
+					<option value="-4">-4</option>
+					<option value="-3">-3</option>
+					<option value="-2">-2</option>
+					<option value="-1">-1</option>
+					<option value="0" selected>0</option>
+					<option value="1">+1</option>
+					<option value="2">+2</option>
+					<option value="3">+3</option>
+					<option value="4">+4</option>
+					<option value="5">+5</option>
+					<option value="6">+6</option>
+					<option value="7">+7</option>
+					<option value="8">+8</option>
+					<option value="9">+9</option>
+				</select>
 
 
-		Apply: <input type="checkbox" id="applyPer-">
+				Apply: <input type="checkbox" id="applyPer-">
 
-	<br>
+			<br>
 
 
 	Proficiency Bonus: 
 
-	<select id="profBonus-">
+		<select id="profBonus-">
 			<option value="0" selected>0</option>
 			<option value="1">+1</option>
 			<option value="2">+2</option>
@@ -87,7 +118,7 @@
 		Apply: <input type="checkbox" id="applyProf-">
 
 
-<br>
+<br><br>
 
 
 	<span id="dieRoll-"></span> 
@@ -101,11 +132,11 @@
 
 <br>
 
-<button id="roll-" onclick="rollDice(d20);">roll d20</button>
+		<button id="roll-" onclick="rollDice(d20);">roll d20</button>
 
-<button id="removePC-" onclick="removePC();" style="float:right">Remove PC</button>
+		<button id="removePC-" onclick="removePC();" style="float:right">Remove PC</button>
 
-</div>
+		</div>
 
 <br><br><br>
 
@@ -117,16 +148,24 @@
 <button id="addPC" onclick="addPC();">Add PC</button>
 
 
-
+</div>
 
 <br><br><br>
 
 
-<div id="rollHistory">
+<section class="section1">
+	
+	<center>Roll History</center>
 
+<div class ="rollHistory" id="rollHistory">
 
 
 </div>
+
+</section>
+
+</div>
+
 
 
 

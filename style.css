@@ -3,10 +3,66 @@ body {
 }
 
 
-.pcBox {
-	border: 1px solid black;
+
+.wrapper {
+	display: flex;
+	background-color: lightblue;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: 1em; /*adjust row gaps bt elements -- but what i rly want is roll hist justified/aligned/whatever to the right and pc-box to left */
+	justify-content: space-around;
+}
+
+/* dont necessarily want it to be 100%, altho maybe without the border?? just want it to be on its on line -- or maybe just 100% of the container, not the whole thing ughhhh*/
+.top {
+	order: 1;
+	width: 100%;
+	padding: .5em .5em .5em .5em;
+	margin: .5em .5em .5em .5em;
+}
+
+
+.section1 {
+	display: flex;
+	flex-direction: column;
+	border: thick dashed blue;
+	order: 3;
+}
+
+
+.rollHistory {
+	flex-basis: 0px;
+	flex-grow: 1;
+	overflow-y: auto;
+	min-width: 10em;
+	max-width: 25em;
+	padding: .5em .5em .5em .5em;
+	margin: .5em .5em .5em .5em;
+}
+
+/*
+.rollHistory {
 	margin: 1em 1em 1em 1em;
 	padding: 10px 10px 10px 10px;
+}
+
+*/
+
+.pc-wrapper {
+	order: 2; 
+	display: flex;
+	flex-direction: column;
+	width: 26em;
+	border: thick dashed red;
+	padding: .5em .5em .5em .5em;
+}
+
+.pcBox {
+	border: 1px solid black;
+	margin: .5em .5em .5em .5em;
+	padding: .5em .5em .5em .5em;
+	max-width: 26em;
+	min-width: 16em;
 }
 
 
@@ -14,16 +70,22 @@ body {
 	border: 1px;
 }
 
-#rollHistory {
-	border: 1px solid black;
+#addPC {
+	max-width: 7em;
+	align-self: center;
 	margin: 1em 1em 1em 1em;
-	padding: 10px 10px 10px 10px;
-	display: flex;
-	flex-direction: column-reverse;
 }
 
 #removePc {
 	background-color: red;
+
+}
+
+#top {
+	border: 1px solid black;
+}
+
+#rollOne {
 
 }
 
@@ -51,3 +113,5 @@ body {
 #secondRoll- {
 
 }
+
+
