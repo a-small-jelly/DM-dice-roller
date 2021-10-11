@@ -11,12 +11,7 @@
 </head>
 
 
-
 <body>
-
-
-<div class="wrapper">
-
 
 
 		<div class ="top" id="top">
@@ -46,6 +41,9 @@
 
 
 
+<div class="wrapper">
+
+
 		<div class="pc-wrapper">
 
 
@@ -53,23 +51,31 @@
 
 
 
-			Name: <input type="text" id="pcName-" onchange="">
-
-			<br>
-	
-			AC: <input type="text" id="ac-" size="4">
+	Name: <input type="text" id="pcName-">
 
 			&emsp;
 
 			Inspiration: <input type="checkbox" id="inspiration-">
 
+			<br>
+
+			AC: <input type="text" id="ac-" size="1" onchange="">
+
+			&emsp;
+
+			Passive Perception: <input type="text" id="passivePerception-" size="1">
+
+					&emsp;
+
+
+
 
 
 			<br>
 	
-			Passive Perception: <input type="text" id="passivePerception-" size="4"><br>
 
-			Perception Modifier:
+
+			Modifier:
 				<select id="perceptionMod-">
 					<option value="-9">-9</option>
 					<option value="-8">-8</option>
@@ -98,35 +104,12 @@
 			<br>
 
 
-	Proficiency Bonus: 
-
-		<select id="profBonus-">
-			<option value="0" selected>0</option>
-			<option value="1">+1</option>
-			<option value="2">+2</option>
-			<option value="3">+3</option>
-			<option value="4">+4</option>
-			<option value="5">+5</option>
-			<option value="6">+6</option>
-			<option value="7">+7</option>
-			<option value="8">+8</option>
-			<option value="9">+9</option>
-	</select>
-
-
-
-		Apply: <input type="checkbox" id="applyProf-">
-
-
-<br><br>
-
 
 	<span id="dieRoll-"></span> 
 	<span id="perMod-"></span>
-	<span id="prof-"></span>
 	<span id="total-" style="font-weight:bold"></span>
 
-	<br>
+
 	<span id="message-" style="color:red;"></span>
 
 
