@@ -76,22 +76,19 @@ function rollDice(die) {
 
 		// check for checkboxes (ik it is redundant it's just for me)
 
-	const ckProf = document.getElementById("applyProf-" + i).checked;
 	const ckPer = document.getElementById("applyPer-" + i).checked;
 
 		// get mods etc and add everything
 
 	const mod = (ckPer == true) ? document.getElementById("perceptionMod-" + i).value : 0;
-	const profB = (ckProf == true) ? document.getElementById("profBonus-" + i).value : 0;
 
  
 
 		// results
 
 	document.getElementById("dieRoll-" + i).innerHTML = roll + " +";
-	document.getElementById("perMod-" + i).innerHTML = mod + " +";
-	document.getElementById("prof-" + i).innerHTML = profB + " =";
-	document.getElementById("total-" + i).innerHTML = +roll + +mod + +profB;
+	document.getElementById("perMod-" + i).innerHTML = mod + " =";
+	document.getElementById("total-" + i).innerHTML = +roll + +mod;
 	document.getElementById("rollHistory").insertAdjacentHTML('afterbegin', name + ": " + roll + "<br>" )
 
 		// crit
