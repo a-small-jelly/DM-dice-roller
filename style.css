@@ -1,34 +1,33 @@
 body {
-
+	line-height: 1.3;
 }
-
 
 .wrapper {
 	display: flex;
-	background-color: lightblue;
+	background-color: white;
 	flex-direction: row;
 	flex-wrap: wrap;
-	column-gap: 1em; /*adjust row gaps bt elements -- but what i rly want is roll hist justified/aligned/whatever to the right and pc-box to left */
+	column-gap: 1em;
 	justify-content: space-around;
 	padding-bottom: 1em;
 }
 
-/* dont necessarily want it to be 100%, altho maybe without the border?? just want it to be on its on line -- or maybe just 100% of the container, not the whole thing ughhhh*/
 .top {
-	order: 1;
-	width: 100%;
-	padding: .5em .5em .5em .5em;
-	margin: .5em .5em .5em .5em;
-}
+	padding: .75em .75em .75em .75em;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	border: 1px solid black;
+	display: inline-block;
+	margin-bottom: 1em;
 
+}
 
 .section1 {
 	display: flex;
 	flex-direction: column;
-	border: thick dashed blue;
-	order: 3;
+	border: thin solid black;
+	order: 2;
 }
-
 
 .rollHistory {
 	flex-basis: 0px;
@@ -41,11 +40,10 @@ body {
 }
 
 .pc-wrapper {
-	order: 2; 
+	order: 1; 
 	display: flex;
 	flex-direction: column;
 	width: 26em;
-	border: thick dashed red;
 	padding: .5em .5em .5em .5em;
 }
 
@@ -55,8 +53,8 @@ body {
 	padding: .5em .5em .5em .5em;
 	max-width: 26em;
 	min-width: 16em;
+	line-height: 1.5em;
 }
-
 
 .roll-results {
 	border: 1px;
@@ -65,16 +63,11 @@ body {
 #addPC, #clear {
 	max-width: 7em;
 	align-self: center;
-	margin: 1em 1em 1em 1em;
+	margin: .5em .5em .5em .5em;
 }
 
-#removePc {
-	background-color: red;
-
-}
-
-
-#top {
-	border: 1px solid black;
+.hr {
+	background-color: black;
+	height: 1px;
 }
 
